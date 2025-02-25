@@ -1,19 +1,22 @@
-#Netflix gpt
+# Netflix GPT
 
--install vite@latest
--install TailwindCSS
+- Install Vite@latest  
+- Install TailwindCSS  
 
-#Features
--Login/Signup page
-    -Sign/Signup Form
-    -redirect to Browse page
--Browse(after authentication)
-    -Header
-    -Main Movie
-        -Trailer in background
-        -Title in Background
-        -MovieSuggestions
-            -MovieList * N
- -Netflix Gpt
-    -Search Bar
-    -Movie Suggestions
+## Features
+
+### Login/Signup Page
+- Sign/Signup Form  
+- Redirect to Browse page  
+
+### Browse (after authentication)
+- Header  
+- Main Movie  
+  - Trailer in background  
+  - Title in background  
+  - Movie Suggestions  
+    - Movie List * N  
+
+### Netflix GPT
+- Search Bar  
+- Movie Suggestions  

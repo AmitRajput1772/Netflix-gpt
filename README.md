@@ -3,9 +3,15 @@
 
 - Install Vite@latest  
 - Install TailwindCSS  
--Header
--Login Form
--Sign up form
+- Header
+- Routing
+- Login Form
+- Sign up form
+- Form Validation
+- useRef Hook
+- FireBase setup
+- Deploying our app to production
+- Create Signup User Account
 
 ## Features
 

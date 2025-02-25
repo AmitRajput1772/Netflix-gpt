@@ -1,7 +1,11 @@
 # Netflix GPT
 
+
 - Install Vite@latest  
 - Install TailwindCSS  
+-Header
+-Login Form
+-Sign up form
 
 ## Features
 

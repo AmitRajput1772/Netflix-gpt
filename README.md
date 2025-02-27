@@ -12,10 +12,16 @@
 - FireBase setup
 - Deploying our app to production
 - Create Signup User Account
--Implement Sign In user api
-- Created redux store with userSlice
--Implemented Sign out feature
+- Implement Sign In user api
+- Created redux store with userSlice        
+- Implemented Sign out feature
 - Update profile
+- BugFix : Sign Up user diaplayName 
+- BigFix : If the user is not logged in redirect him to login page and vice versa
+- Unsubscribed to the onAuthStateChanged callback
+- Add Hardcoded  to the constants file
+- Register TMDB Api & create an app and get access token
+- Get data from TMDB now playing list API 
 
 ## Features
 

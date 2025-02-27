@@ -14,7 +14,7 @@ const Body = () => {
     const user = useSelector((state) => state.user);
 
     useEffect((effect) => { 
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe =  onAuthStateChanged(auth, (user) => {
             if (user) {
                 const { uid, email, displayName, photoURL } = user;
                 dispatch(addUser({ uid, email, displayName, photoURL }));
@@ -24,6 +24,9 @@ const Body = () => {
                 navigate("/");
             }
         });
+
+        // unsubscribe when the component unmounts
+        return () => unsubscribe();
     }, [])
     
     

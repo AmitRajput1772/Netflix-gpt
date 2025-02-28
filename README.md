@@ -22,6 +22,12 @@
 - Add Hardcoded  to the constants file
 - Register TMDB Api & create an app and get access token
 - Get data from TMDB now playing list API 
+- Create hook for now playing movies
+- Update store with movies data
+- Planning for maincontainer and moviecontainer
+- Fetch data from trailer video
+- Update store with trailer video
+-  Build secondary commponent
 
 ## Features
 

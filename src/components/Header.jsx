@@ -29,7 +29,7 @@ const Header = () => {
     }, [user])
 
     return (
-        <div className="absolute flex justify-between items-center w-full px-8 py-2 bg-gradient-to-b from-black">
+        <div className="absolute z-20 flex justify-between items-center w-full px-8 py-2 bg-gradient-to-b from-black">
             {/* Netflix Logo */}
             <img
                 className="w-44"

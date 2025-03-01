@@ -28,6 +28,7 @@
 - Fetch data from trailer video
 - Update store with trailer video
 -  Build secondary commponent
+- Added Selected Movie Card
 
 ## Features
 

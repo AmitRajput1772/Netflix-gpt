@@ -6,6 +6,7 @@ const VideoBackground = ({ movieId }) => {
     console.log("movieId", movieId);
     useMovieTrailer(movieId);
     const trailerVideo = useSelector(state => state.movies?.trailerVideo);
+    console.log(trailerVideo?.key);
 
     return (
         <div className="w-screen">

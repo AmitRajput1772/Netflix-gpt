@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUSer } from "../utils/userSlice";
+import SelectedMovie from "./SelectedMovie";
 
 const Body = () => {
 
@@ -34,6 +35,7 @@ const Body = () => {
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/browse" element={<Browse />} />
+                <Route path="/selectedMovie" element={<SelectedMovie />} />
             </Routes>
     );
 };

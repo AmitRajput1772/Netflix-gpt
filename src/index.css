@@ -9,4 +9,26 @@
     scrollbar-width: none;
 }
 
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background */
+}
+
+/* Scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+    background: #ed4242; /* Red color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c; /* Darker red on hover */
+}
+
+
 

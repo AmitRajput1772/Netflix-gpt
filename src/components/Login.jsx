@@ -7,7 +7,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { PHOTO_URL } from "../utils/constants";
+import { BG_IMAGE, PHOTO_URL } from "../utils/constants";
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -86,7 +86,7 @@ const Login = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10 before:absolute before:inset-0 before:bg-black/60">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/0cf2c109-3af1-4a9d-87d7-aecfac5fe881/web/IN-en-20250217-TRIFECTA-perspective_c3376e06-9aff-4657-aafb-91256a597b7c_large.jpg"
+          src= {BG_IMAGE}
           alt="Background"
           className="w-full h-full object-cover"
         />

@@ -1,8 +1,11 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
+import useGptMovieSearch from "../utils/useGptMovieSearch";
+
 
 const GptSearchBar = () => {
 
+    const { searchText, handleSearch } = useGptMovieSearch();
     const langKey = useSelector((store) => store.config.lang);
 
     return (
@@ -12,8 +15,11 @@ const GptSearchBar = () => {
                     type="text"
                     placeholder={lang[langKey].gptSearchPlaceHolder}
                     className="w-full p-3 text-gray-700 outline-none"
+                    ref={searchText}
                 />
-                <button className="bg-red-600 text-white px-5 py-3 hover:bg-red-700 transition">
+                <button
+                    onClick={handleSearch}
+                    className="bg-red-600 text-white px-5 py-3 hover:bg-red-700 transition">
                     {lang[langKey].search}
                 </button>
             </div>

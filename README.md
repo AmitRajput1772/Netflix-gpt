@@ -29,6 +29,10 @@
 - Update store with trailer video
 -  Build secondary commponent
 - Added Selected Movie Card
+- Gpt Search page
+- Gpt Search Bar
+- Gpt Movie Suggestion
+- Multi Language Feature
 
 ## Features
 

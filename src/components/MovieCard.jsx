@@ -9,7 +9,6 @@ const MovieCard = ({ posterPath, movie }) => {
     const navigate = useNavigate();
 
     const handleClick = (movie) => {
-        console.log("selected movie is ", movie);
         dispatch(addSelectedMovie(movie));
         navigate("/selectedMovie");
 

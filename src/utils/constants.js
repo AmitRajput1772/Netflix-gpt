@@ -23,3 +23,6 @@ export const SUPPORTED_LANGUAGES = [
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" }
 ];
+
+export const Gemini_KEY =
+    "AIzaSyBykezuJ3sEsEXbQkG0nlW5ZH5Cc7MwI_M";

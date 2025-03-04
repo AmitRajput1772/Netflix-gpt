@@ -15,7 +15,7 @@ const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
-    const searchView = useSelector(state => state.gptSlice.searchView);
+    const searchView = useSelector(state => state.gpt.searchView);
 
     const handleSignOut = () => {
         signOut(auth).then(() => {
@@ -44,12 +44,12 @@ const Header = () => {
             {/* Netflix Logo */}
             <img
                 className="w-44"
-                src= {LOGO}
+                src={LOGO}
             />
 
             {user && <div className="relative flex gap-6">
 
-                {searchView &&  
+                {searchView &&
                     <select
                         className="px-4 py-2 text-lg border text-white border-gray-300 rounded-lg bg-gray-600 shadow-md hover:border-red-500 focus:outline-none focus:ring focus:ring-red-400 transition duration-300 cursor-pointer"
                         onClick={handleLanguageChange}
@@ -102,7 +102,7 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-                
+
             </div>}
         </div>
 

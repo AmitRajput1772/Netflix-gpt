@@ -11,8 +11,7 @@ const useGptMovieSearch = () => {
     // Function to search movies in TMDB
     const searchMovieTMDB = async (movie) => {
         try {
-            const response = await fetch(
-                `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(movie)}&include_adult=false&language=en-US&page=1`,
+            const response = await fetch("https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1",
                 API_OPTIONS
             );
 
@@ -30,7 +29,7 @@ const useGptMovieSearch = () => {
 
     // Function to handle search using GPT & TMDB
     const handleSearch = async () => {
-        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 5 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang`;
+        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 10 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang`;
 
         if (!searchText.current.value) return;
         console.log("User Input:", query);
@@ -62,3 +61,5 @@ const useGptMovieSearch = () => {
 };
 
 export default useGptMovieSearch;
+
+

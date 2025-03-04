@@ -15,14 +15,15 @@ const Browse = () => {
   useUpcomingMovies();
   useUpcomingMovies();
   useTopRatedMovies();
-  const gptSearch = useSelector(state => state.gptSlice?.searchView);
+  const gptSearch = useSelector(state => state.gpt?.searchView);
 
 
   return (
     <div className=" bg-black">
-      <Header />
+      
       {gptSearch ? <GptSearch /> :
         <>
+          <Header />
           <MainContainer />
           <SecondaryContainer />
         </>

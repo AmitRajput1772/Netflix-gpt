@@ -29,8 +29,14 @@ const Header = () => {
     }
 
     const handleGPTSearch = () => {
+        if (searchView) {
+            navigate("/browse"); // Redirect to Browse page
+        } else {
+            navigate("/gpt-search"); // Redirect to GPT Search page
+        }
         dispatch(toggleSearchView());
-    }
+    };
+
 
     const handleLanguageChange = (e) => {
         dispatch(changeLanguage(e.target.value));

@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUSer } from "../utils/userSlice";
 import SelectedMovie from "./SelectedMovie";
+import GptSearch from "./GptSearch";
 
 const Body = () => {
 
@@ -36,6 +37,7 @@ const Body = () => {
                 <Route path="/" element={<Login />} />
                 <Route path="/browse" element={<Browse />} />
                 <Route path="/selectedMovie" element={<SelectedMovie />} />
+            <Route path="/gpt-search" element={<GptSearch />} />
             </Routes>
     );
 };

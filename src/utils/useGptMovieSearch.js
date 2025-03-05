@@ -34,7 +34,7 @@ const useGptMovieSearch = () => {
 
         dispatch(setLoading(true)); // ⬅️ Show shimmer before fetching
 
-        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 10 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang`;
+        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 10 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang Also keep this in mind if i give you exact movie name try to give me that movie and related movies also Eg: If i give you Game of thrones give me this me name along with its related moovies`;
 
         try {
             // Sending input text to Gemini API

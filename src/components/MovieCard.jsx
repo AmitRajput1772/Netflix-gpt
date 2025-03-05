@@ -4,20 +4,20 @@ import { addSelectedMovie } from "../utils/moviesSlice";
 import { useNavigate } from "react-router";
 
 const MovieCard = ({ posterPath, movie }) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleClick = (movie) => {
         dispatch(addSelectedMovie(movie));
         navigate("/selectedMovie");
+    };
 
-    }
     return (
-        <div className="w-full relative h-80 flex items-center justify-center p-2">
+        <div className="relative flex items-center justify-center p-2 snap-center">
             <div
                 onClick={() => handleClick(movie)}
-                className="transform min-w-28  sm:min-w-32 md:min-w-36 lg:min-w-40 xl:min-w-44 aspect-[2/3]  hover:z-10 transition duration-500 hover:scale-125 flex justify-center items-center">
+                className="min-w-[6rem] sm:min-w-[7rem] md:min-w-[9rem] lg:min-w-[11rem] xl:min-w-[13rem] aspect-[2/3] hover:scale-110 hover:z-10 transition duration-300 ease-in-out cursor-pointer"
+            >
                 <img
                     src={IMG_CDN_URL + posterPath}
                     alt="moviecard"

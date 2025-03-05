@@ -10,9 +10,12 @@ const MainContainer = () => {
     const { original_title, overview, id } = mainMovie;
 
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full">
             <VideoBackground movieId={id} />
-            <VideoTitle title={original_title} overview={overview} />
+            {/* Movie title now moves below video on smaller screens */}
+            <div className="md:absolute md:top-0 md:left-0 md:w-full md:h-full flex flex-col md:justify-end">
+                <VideoTitle title={original_title} overview={overview} />
+            </div>
         </div>
     );
 };

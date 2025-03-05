@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useRef } from "react";
 import model from "../utils/geminiai";
 import { API_OPTIONS } from "../utils/constants";
-import { addGptMovieResult } from "../utils/gptSlice";
+import { addGptMovieResult, setLoading } from "../utils/gptSlice";
 
 const useGptMovieSearch = () => {
     const searchText = useRef();
@@ -11,7 +11,8 @@ const useGptMovieSearch = () => {
     // Function to search movies in TMDB
     const searchMovieTMDB = async (movie) => {
         try {
-            const response = await fetch("https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1",
+            const response = await fetch(
+                `https://api.themoviedb.org/3/search/movie?query=${movie}&include_adult=false&language=en-US&page=1`,
                 API_OPTIONS
             );
 
@@ -29,10 +30,11 @@ const useGptMovieSearch = () => {
 
     // Function to handle search using GPT & TMDB
     const handleSearch = async () => {
-        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 10 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang`;
-
         if (!searchText.current.value) return;
-        console.log("User Input:", query);
+
+        dispatch(setLoading(true)); // ⬅️ Show shimmer before fetching
+
+        const query = `Act as a Movie Recommendation System and suggest some movies for the query ${searchText.current.value}. Only give me names of 10 movies, comma-separated like this: Example Result: Gadar, Sholay, Don, Golmaal, Dabang`;
 
         try {
             // Sending input text to Gemini API
@@ -54,6 +56,7 @@ const useGptMovieSearch = () => {
             console.log("TMDB Results:", tmdbResults);
         } catch (error) {
             console.error("Error in handleSearch:", error);
+            dispatch(setLoading(false)); // ⬅️ Stop shimmer in case of error
         }
     };
 
@@ -61,5 +64,3 @@ const useGptMovieSearch = () => {
 };
 
 export default useGptMovieSearch;
-
-
